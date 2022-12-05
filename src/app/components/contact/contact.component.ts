@@ -9,6 +9,7 @@ import { ContactFormData } from 'src/app/models/contact-form-data.model';
 export class ContactComponent implements OnInit{
 
   @Output() public sendForm: EventEmitter<ContactFormData> = new EventEmitter<ContactFormData>();
+  @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
 
   public btnDisabled = true;
   public formData: ContactFormData = {
@@ -17,6 +18,7 @@ export class ContactComponent implements OnInit{
   }
 
   ngOnInit(){
+    this.elementCreated.emit('contact');
     setTimeout(() => {
       this.btnDisabled = false;
     }, 5000);

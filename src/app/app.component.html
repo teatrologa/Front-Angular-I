@@ -26,13 +26,13 @@
 
   <!-- Address -->
   <section id="address" class="my-5">
-    <app-address [addressData]="data.address" (getAddressData)="onGetAddressData($event)"></app-address>
+    <app-address [addressData]="data.address" (getAddressData)="onGetAddressData($event)" (elementCreated)="onElementCreated($event)"></app-address>
   </section>
   <!-- End Address -->
 
   <!-- Contact -->
   <section id="contact" class="my-5">
-    <app-contact (sendForm)="onContactFormSubmitted($event)"></app-contact>
+    <app-contact (sendForm)="onContactFormSubmitted($event)" (elementCreated)="onElementCreated($event)"></app-contact>
   </section>
   <!-- End Contact -->
 
