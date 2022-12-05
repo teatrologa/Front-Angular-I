@@ -14,7 +14,7 @@
 
   <!-- Features -->
   <section id="features" class="my-5">
-    <app-features [featureData]="data.features"></app-features>
+    <app-features [featureData]="data.features" (elementCreated)="onElementCreated($event)"></app-features>
   </section>
   <!-- End Features -->
 
@@ -26,7 +26,7 @@
 
   <!-- Address -->
   <section id="address" class="my-5">
-    <app-address [addressData]="data.address"></app-address>
+    <app-address [addressData]="data.address" (getAddressData)="onGetAddressData($event)"></app-address>
   </section>
   <!-- End Address -->
 

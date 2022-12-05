@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AddressData } from './models/address-data.model';
+import { AddressSectionData } from './models/address-section-data.model';
 import { AppData } from './models/app-data.model';
 import { ContactFormData } from './models/contact-form-data.model';
 
@@ -59,5 +61,8 @@ export class AppComponent {
     console.log("Formulário enviado de forma bem sucedida!", formData)
   }
 
+  onGetAddressData(addressData: AddressSectionData["data"]): void {
+    console.log("Endereço recebido com sucesso!" + addressData)
+  }
   
 }

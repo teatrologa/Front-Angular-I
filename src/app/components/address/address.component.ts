@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AddressData } from 'src/app/models/address-data.model';
 import { AddressSectionData } from 'src/app/models/address-section-data.model';
 
 @Component({
@@ -12,6 +13,14 @@ export class AddressComponent implements OnInit{
   
   constructor() { }
 
-  ngOnInit() { }
+  @Output() public getAddressData: EventEmitter<AddressSectionData["data"]> = new EventEmitter<AddressSectionData["data"]>();
+
+  public getAddress(): void {
+    this.getAddressData.emit(this.addressData.data);
+  }
+
+  ngOnInit(){
+    this.getAddressData.emit();
+  }
   // Metodo do ciclo de vida de um componenete (ainda não estudado)
 }
