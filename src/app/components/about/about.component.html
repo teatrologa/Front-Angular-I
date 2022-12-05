@@ -1,8 +1,8 @@
 
     <div class="container">
-      <h1 class="text-center mb-4">Sobre a empresa</h1>
-      <p innerHTML="{{getCompanyInfo()}}"></p>
-      <p [innerHTML]="getCompanyInfo()"></p>
+      <h1 class="text-center mb-4">{{aboutData.sectionTitle}}</h1>
+      <!-- <p innerHTML="{{getCompanyInfo()}}"></p> -->
+      <p [innerHTML]="aboutData.text"></p>
       <!-- Existem essas duas formas de declarar esse conteúdo acima, deixando duplicado a titulo de estudo. 
       1. interpolação de string
       2. property binding

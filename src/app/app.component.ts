@@ -50,5 +50,9 @@ export class AppComponent {
     }
   }
 
+  onElementCreated(e: string): void {
+    console.log("Elemento criado:" + e);
+  }
+
   
 }
