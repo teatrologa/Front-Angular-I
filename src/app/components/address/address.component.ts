@@ -13,14 +13,14 @@ export class AddressComponent implements OnInit{
   
   constructor() { }
 
-  @Output() public getAddressData: EventEmitter<AddressSectionData["data"]> = new EventEmitter<AddressSectionData["data"]>();
+  @Output() public getAddressData: EventEmitter<AddressData> = new EventEmitter<AddressData>();
 
   public getAddress(): void {
     this.getAddressData.emit(this.addressData.data);
   }
 
   ngOnInit(){
-    this.getAddressData.emit();
+    this.getAddressData.emit(this.addressData.data);
   }
   // Metodo do ciclo de vida de um componenete (ainda não estudado)
 }

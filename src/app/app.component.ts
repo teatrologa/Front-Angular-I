@@ -61,8 +61,8 @@ export class AppComponent {
     console.log("Formulário enviado de forma bem sucedida!", formData)
   }
 
-  onGetAddressData(addressData: AddressSectionData["data"]): void {
-    console.log("Endereço recebido com sucesso!" + addressData)
+  onGetAddressData(addressData: AddressData): void {
+    console.log("Endereço recebido com sucesso! Cidade: " + addressData.city)
   }
   
 }
