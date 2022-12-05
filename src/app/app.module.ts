@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    FormsModule
+    // Isso é chamado para usar o two binding no form/textarea
   ],
   providers: [],
   bootstrap: [AppComponent]
