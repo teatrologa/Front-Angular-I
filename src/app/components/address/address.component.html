@@ -1,13 +1,15 @@
 <div class="container">
-  <h1 class="text-center mb-4">Endereço</h1>
+  <h1 class="text-center mb-4">{{addressData.sectionTitle}}</h1>
   <p>
-    {{ addressData.street }},
-    {{ addressData.number }},
-    {{ addressData.complement }}.
+    {{ addressData.data.street }},
+    {{ addressData.data.number }},
+    {{ addressData.data.complement }}.
   </p>
   <p>
-    {{ addressData.district }},
-    {{ addressData.city }}-{{ addressData.state }}.
+    {{ addressData.data.district }},
+    {{ addressData.data.city }}-{{ addressData.data.state }}.
   </p>
-  <p>CEP: {{ addressData.zipCode }}</p>
+  <p [innerHTML]="addressData.data.zipCode"></p>
+
+  <!-- duas formas de chamar as info aqui no filho -->
 </div>

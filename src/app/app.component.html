@@ -14,7 +14,7 @@
 
   <!-- Features -->
   <section id="features" class="my-5">
-    <app-features></app-features>
+    <app-features [featureData]="data.features"></app-features>
   </section>
   <!-- End Features -->
 
@@ -26,13 +26,13 @@
 
   <!-- Address -->
   <section id="address" class="my-5">
-    <app-address></app-address>
+    <app-address [addressData]="data.address"></app-address>
   </section>
   <!-- End Address -->
 
   <!-- Contact -->
   <section id="contact" class="my-5">
-    <app-contact></app-contact>
+    <app-contact (sendForm)="onContactFormSubmitted($event)"></app-contact>
   </section>
   <!-- End Contact -->
 

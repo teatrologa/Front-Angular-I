@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FeatureSectionData } from 'src/app/models/features-section-data.model';
 
 @Component({
   selector: 'app-features',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./features.component.css']
 })
 export class FeaturesComponent {
-
+  @Input() public featureData!: FeatureSectionData;
 }
