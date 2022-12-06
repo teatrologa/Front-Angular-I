@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { AddressData } from './models/address-data.model';
-import { AddressSectionData } from './models/address-section-data.model';
 import { AppData } from './models/app-data.model';
 import { ContactFormData } from './models/contact-form-data.model';
+import { InputSearchData } from './models/input-search-data.model';
 
 @Component({
   selector: 'app-root',
@@ -59,6 +59,10 @@ export class AppComponent {
 
   onContactFormSubmitted(formData: ContactFormData): void {
     console.log("Formulário enviado de forma bem sucedida!", formData)
+  }
+
+  onSearchSubmitted(searchData: InputSearchData): void {
+    console.log("Buscar por:", searchData)
   }
 
   onGetAddressData(addressData: AddressData): void {

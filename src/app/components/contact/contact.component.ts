@@ -6,12 +6,14 @@ import { ContactFormData } from 'src/app/models/contact-form-data.model';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
+
 export class ContactComponent implements OnInit{
 
   @Output() public sendForm: EventEmitter<ContactFormData> = new EventEmitter<ContactFormData>();
   @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
 
   public btnDisabled = true;
+
   public formData: ContactFormData = {
     email: "",
     message: ""
@@ -26,10 +28,11 @@ export class ContactComponent implements OnInit{
 
   public submitForm(): void {
     console.log("Formulário Enviado!");
-    // console.log(this.formData); 
     this.sendForm.emit(this.formData);
   }
 
+
+  // não usado mais
   public showInputData(e: any): void {
     console.log("Email: " + e.target.value);
   }
